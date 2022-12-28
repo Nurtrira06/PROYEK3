@@ -34,4 +34,6 @@ urlpatterns = [
 
     re_path(r'^oauth/', include('social_django.urls', namespace='social')),
 
+#     path('predict/result/', CustomLoginView.as_view(template_name='users/result.html'), name='result')
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

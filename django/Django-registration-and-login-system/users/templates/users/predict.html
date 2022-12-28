@@ -1,0 +1,178 @@
+{% extends "users/base.html" %} {% load static %} {% block title %}Predict
+Page{% endblock title %} {% block content %}
+<div class="form-content my-3 p-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div
+          class="card shadow-lg border-0 rounded-lg mt-0 mb-3"
+          style="background-color: #fed7e4"
+        >
+          <div
+            class="card-header justify-content-center"
+            style="background-color: #fe7ba7"
+          >
+            <h3
+              class="font-weight-light my-1 text-center"
+              style="color: #ffffff"
+            >
+              Prediksi Kanker Payudara
+            </h3>
+          </div>
+          <div class="card-body">
+            <div class="row my-3 p-3">
+              <form method="POST" action="result">
+                {% csrf_token %}
+                <p>Masukan rerata_jari2_lobus :</p>
+                <input
+                  type="number"
+                  name="rerata_jari2_lobus"
+                  id="rerata_jari2_lobus"
+                />
+                <br />
+                <p>Masukan rerata_tumor_inti :</p>
+                <input
+                  type="number"
+                  name="rerata_tumor_inti"
+                  id="rerata_tumor_inti"
+                />
+                <br />
+                <p>Masukan rerata_luas_lobus :</p>
+                <input
+                  type="number"
+                  name="rerata_luas_lobus"
+                  id="rerata_luas_lobus"
+                />
+                <br />
+                <p>Masukan rerata_luas_permukaan_tumor :</p>
+                <input
+                  type="number"
+                  name="rerata_luas_permukaan_tumor"
+                  id="rerata_luas_permukaan_tumor"
+                />
+                <br />
+                <p>Masukan rerata_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="rerata_cekungan_kontur"
+                  id="rerata_cekungan_kontur"
+                />
+                <br />
+                <p>Masukan rerata_jumlah_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="rerata_jumlah_cekungan_kontur"
+                  id="rerata_jumlah_cekungan_kontur"
+                />
+                <br />
+                <p>Masukan se_jari2_lobus :</p>
+                <input
+                  type="number"
+                  name="se_jari2_lobus"
+                  id="se_jari2_lobus"
+                />
+                <br />
+                <p>Masukan se_tekstur_permukaan :</p>
+                <input
+                  type="number"
+                  name="se_tekstur_permukaan"
+                  id="se_tekstur_permukaan"
+                />
+                <br />
+                <p>Masukan se_tumor_inti :</p>
+                <input type="number" name="se_tumor_inti" id="se_tumor_inti" />
+                <br />
+                <p>Masukan se_luas_permukaan_tumor :</p>
+                <input
+                  type="number"
+                  name="se_luas_permukaan_tumor"
+                  id="se_luas_permukaan_tumor"
+                />
+                <br />
+                <p>Masukan se_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="se_cekungan_kontur"
+                  id="se_cekungan_kontur"
+                />
+                <br />
+                <p>Masukan se_jumlah_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="se_jumlah_cekungan_kontur"
+                  id="se_jumlah_cekungan_kontur"
+                />
+                <br />
+                <p>Masukan se_fraktal_spesimen :</p>
+                <input
+                  type="number"
+                  name="se_fraktal_spesimen"
+                  id="se_fraktal_spesimen"
+                />
+                <br />
+                <p>Masukan keparahan_jari2_lobus :</p>
+                <input
+                  type="number"
+                  name="keparahan_jari2_lobus"
+                  id="keparahan_jari2_lobus"
+                />
+                <br />
+                <p>Masukan keparahan_tekstur_permukaan :</p>
+                <input
+                  type="number"
+                  name="keparahan_tekstur_permukaan"
+                  id="keparahan_tekstur_permukaan"
+                />
+                <br />
+                <p>Masukan keparahan_tumor_inti :</p>
+                <input
+                  type="number"
+                  name="keparahan_tumor_inti"
+                  id="keparahan_tumor_inti"
+                />
+                <br />
+                <p>Masukan keparahan_luas_lobus :</p>
+                <input
+                  type="number"
+                  name="keparahan_luas_lobus"
+                  id="keparahan_luas_lobus"
+                />
+                <br />
+                <p>Masukan keparahan_luas_permukaan_tumor :</p>
+                <input
+                  type="number"
+                  name="keparahan_luas_permukaan_tumor"
+                  id="keparahan_luas_permukaan_tumor"
+                />
+                <br />
+                <p>Masukan keparahan_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="keparahan_cekungan_kontur"
+                  id="keparahan_cekungan_kontur"
+                />
+                <br />
+                <p>Masukan keparahan_jumlah_cekungan_kontur :</p>
+                <input
+                  type="number"
+                  name="keparahan_jumlah_cekungan_kontur"
+                  id="keparahan_jumlah_cekungan_kontur"
+                />
+                <br />
+                <input
+                  type="submit"
+                  value="Lakukan Prediksi"
+                  class="btn btn-block bg-success text-light"
+                />
+
+                {% endblock%}
+              </form>
+            </div>
+
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

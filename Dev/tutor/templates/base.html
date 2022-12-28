@@ -23,6 +23,61 @@
         <div class="col-md-100">
             <h1 align="center">HALAMAN PREDIKSI KANKER PAYUDARA {{href}}</h1>
         </div>
+
+<!-- predict -->
+<!-- Outer Row -->
+		<div class="row justify-content-center">
+
+			<div class="col-sm-12 col-md-9">
+
+				<div class="card o-hidden border-0 shadow-lg my-5 bg-dark">
+					<div class="card-body p-0">
+						<!-- Nested Row within Card Body -->
+						<div class="row">
+							<div class="col-lg-12">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="p-5">
+									<div class="text-center">
+                     <div class="sidebar-brand-icon">
+                        <i class="fas fa-warehouse"></i>
+                          </div> 
+                              <h1 class="h4 text-light mb-4"><b>PREDIKSI KANKER PAYUDARA</b></h1>
+                                <div class="sidebar-brand-text mx-3 text-light"> Silahkan inputkan tahun dalam bentuk angka </div>
+							        <br>	
+                                </div>
+                                {% block content %}
+									               <form class="user" method="POST" action="result">
+                                        {% csrf_token %}
+								             		<div class="form-group">
+										         	<input type="float" name="Age" id="Age" class="form-control"  placeholder="Inputkan Usia" autocomplete="off" required ><br>
+                               <input type="integer" name="JobLevel" id="JobLevel" class="form-control"  placeholder="Inputkan Job Level" autocomplete="off" required ><br>
+                               <input type="integer" name="YearsAtCompany" id="YearsAtCompany" class="form-control"  placeholder="Inputkan Total Tahun Bekerja" autocomplete="off" required ><br>
+                               <input type="integer" name="TotalWorkingYears" id="TotalWorkingYears" class="form-control"  placeholder="Inputkan Total Tahun Bekerja Di Perusahaan" autocomplete="off" required >
+									           	</div>
+									             	<div class="form-row">
+									          	<div class="form-group col-md-12">
+										<input type="submit" value="Lakukan Prediksi" class="btn btn-block bg-success text-light">
+										</div>
+									</div>
+                   {% endblock %}
+									</form>
+                   {{ result }}
+                    <br>
+                    <div class="float-right">
+                        <a href="http://127.0.0.1:8000/prediksi/dashboard/" class="btn btn-secondary btn-sm">Kembali</a>
+                      </div>
+								</div>
+							</div>							
+						</div>      
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- predict end -->
+
     </div>
     </div>
 
