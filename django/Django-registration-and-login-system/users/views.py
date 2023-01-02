@@ -101,6 +101,10 @@ def profile(request):
 def predict(request):
     context = {'a' : 1}
     # return redirect(to='result')
+    # return render(request, 'users/predict.html')
+
+    # context = {'a' : 1}
+    # # return redirect(to='result')
     return render(request, 'users/predict.html', context)
 
 def result(request):
