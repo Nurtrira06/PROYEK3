@@ -108,6 +108,7 @@ def predict(request):
     return render(request, 'users/predict.html', context)
 
 def result(request):
+  
     request
     rerata_jari2_lobus = int(request.POST.get('rerata_jari2_lobus'))
     rerata_tumor_inti = int(request.POST.get('rerata_tumor_inti'))
