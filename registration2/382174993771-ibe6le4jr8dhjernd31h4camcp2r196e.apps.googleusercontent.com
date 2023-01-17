@@ -1,2 +1,0 @@
-382174993771-ibe6le4jr8dhjernd31h4camcp2r196e.apps.googleusercontent.com
-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

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+{% load static %}
+    <div class="jumbotron jumbotron-fluid" style="background-color: #FED7E4">
+        <center>
+        <img src="{% static "img/breastcancerlogo.jpg" %}" alt="" style="display:block; width:650px;height:250px; ">
+        </center>
+        <h1 class="display-3"> Hi Welcome</h1>
+        <p class="lead">
+            Aplikasi ini bertujuan untuk mendeteksi dini <b>Kanker Payudara</b> agar dapat menyelamatkan Nyawa Anda !
+            Menunda berarti memberi kesempatan sel kanker berkembang dan mengurangi kesempatan untuk sembuh.
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            <center>
+                <a class="btn-primary btn-lg" href="{% url 'predict' %}" role="button" style="background-color: #fe7ba7" > Let's Predict Now !</a>
+                <a class="btn-primary btn-lg" href="{% url 'logout' %}" role="button" style="background-color: #fe7ba7" > Logout</a>     
+            </center>
+        </p>
+    </div>
+    <br>
+
+{% endblock content %}
