@@ -4,157 +4,160 @@
 {% block content %}
 <h1 class="container text-info" id="knkr" ></h1>
 
-<div class="row justify-content-center col-md-50">
-    <div class="col-md-6">
-        <div class="card shadow">
-            <div class="card-header bg-dark">
-                <div class="float-left">
-                    <h4 class="h4 m-0 text-light"><b>TAMBAH DATA</b></h4>
-                </div>
-                <div class="float-right">
-                    <a href="http://127.0.0.1:8000/viewdata/" class="btn btn-secondary btn-sm">Kembali</a>
-                  </div>
-            </div>
-            <div class="card-body bg-gray-100">
-               <h4>Silahkan masukan data kanker.</h4>
-                <hr>
-                <form action="/knkr/" id="form-tambah" method="POST">
-                  {% csrf_token %}
-                <div class="float-left">
-                   <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Jari2 Lobus :</strong></label>
-                          <div>{{ form.rerata_jari2_lobus }}</div> 
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Tumor Inti : </strong></label>
-                            <div>{{ form.rerata_tumor_inti }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Luas Lobus : </strong></label>
-                            <div>{{ form.rerata_luas_lobus }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Jari2 Lobus : </strong></label>
-                            <div>{{ form.se_jari2_lobus }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Tekstur Permukaan : </strong></label>
-                            <div>{{ form.se_tekstur_permukaan }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Tumor Inti : </strong></label>
-                            <div>{{ form.se_tumor_inti }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Fraktal Spesimen : </strong></label>
-                            <div>{{ form.se_fraktal_spesimen }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Tekstur Permukaan : </strong></label>
-                            <div>{{ form.keparahan_tekstur_permukaan }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Tumor Inti : </strong></label>
-                            <div>{{ form.keparahan_tumor_inti }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Luas Lobus : </strong></label>
-                            <div>{{ form.keparahan_luas_lobus }}</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- bagian kiri -->
-                <div class="float-right">
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Luas Permukaaan Tumor : </strong></label>
-                            <div>{{ form.rerata_luas_permukaan_tumor }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Cekungan Kontur : </strong></label>
-                            <div>{{ form.rerata_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Rerata Jumlah Cekungan Kontur : </strong></label>
-                            <div>{{ form.rerata_jumlah_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Luas Permukaan Tumor: </strong></label>
-                            <div>{{ form.se_luas_permukaan_tumor }}</div>
-                        </div>
-                    </div>                    
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Cekungan Kontur : </strong></label>
-                            <div>{{ form.se_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>SE Jumlah Cekungan Kontur : </strong></label>
-                            <div>{{ form.se_jumlah_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Jari2 Lobus : </strong></label>
-                            <div>{{ form.keparahan_jari2_lobus }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Luas Permukaan Tumor : </strong></label>
-                            <div>{{ form.keparahan_luas_permukaan_tumor }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Cekungan Kontur : </strong></label>
-                            <div>{{ form.keparahan_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-15">
-                            <label for=" "><strong>Keparahan Jumlah Cekungan Kontur : </strong></label>
-                            <div>{{ form.keparahan_jumlah_cekungan_kontur }}</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                        <button type="reset" class="btn btn-danger">Batal</button>
-                    </div>
-                  </div>
-            </form>
-            </div>				
+<div class="jumbotron">
+    <center>
+    <h4 > Tambah data Kanker Payudara</h4>
+    <p class="lead">
+        Silahkan Inputkan data Anda !
+    </p>
+  </center>
+    <hr class="my-4">
+  </div>
+
+
+<!-- Container Form Prediksi-->
+<div class="container">
+    <form action="/knkr/" id="form-tambah" method="POST">
+       {% csrf_token %}
+       <div class="row">
+        <div class="col">
+            <p>Rerata Jari-Jari Lobus :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Jari-Jari Lobus" 
+            name="rerata_jari2_lobus" id="rerata_jari2_lobus" />
+          </div>
+          <div class="col">
+            <p>Rerata Tumor Inti :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Tumor Inti" 
+            name="rerata_tumor_inti" id="rerata_tumor_inti" />
+          </div>
         </div>
+        <div class="row">
+          <div class="col">
+            <p>Rerata Luas Lobus :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Luas Lobus" 
+            name="rerata_luas_lobus" id="rerata_luas_lobus" />
+          </div>
+          <div class="col">
+            <p>Rerata Luas Permukaan Tumor :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Luas Permukaan Tumor"  
+            name="rerata_luas_permukaan_tumor" id="rerata_luas_permukaan_tumor" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Rerata Cekungan Kontur :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Cekungan Kontur"  
+            name="rerata_cekungan_kontur"
+            id="rerata_cekungan_kontur" />
+          </div>
+          <div class="col">
+            <p>Rerata Jumlah Cekungan Kontur :</p>
+            <input type="number" class="form-control" placeholder="Masukan Rerata Jumlah Cekungan Kontur" 
+            name="rerata_jumlah_cekungan_kontur"
+            id="rerata_jumlah_cekungan_kontur" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>SE jari-jari Lobus :</p>
+            <input type="number" class="form-control" placeholder="Masukan SE jari-jari Lobus" 
+            name="se_jari2_lobus" id="se_jari2_lobus"/>
+          </div>
+          <div class="col">
+            <p>Tekstur Permukaan :</p>
+            <input type="number" class="form-control" placeholder="Masukan SE Tekstur Permukaan" 
+            name="se_tekstur_permukaan" id="se_tekstur_permukaan"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>SE Tumor Inti : </p>
+            <input type="number" class="form-control" placeholder="Masukan SE Tumor Inti"  
+            name="se_tumor_inti" id="se_tumor_inti"/>
+          </div>
+          <div class="col">
+            <p>SE Luas Permukaan Tumor : </p>
+            <input type="number" class="form-control" placeholder="Masukan SE Luas Permukaan Tumor"  
+            name="se_luas_permukaan_tumor" id="se_luas_permukaan_tumor"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>SE Cekungan Kontur : </p>
+            <input type="number" class="form-control" placeholder="Masukan SE Cekungan Kontur"  
+            name="se_cekungan_kontur" id="se_cekungan_kontur"/>
+          </div>
+          <div class="col">
+            <p>SE Jumlah Cekungan Kontur :</p>
+            <input type="number" class="form-control" placeholder="Masukan SE Jumlah Cekungan Kontur" 
+            name="se_jumlah_cekungan_kontur" id="se_jumlah_cekungan_kontur"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>SE Fraktal Spesimen :</p>
+            <input type="number" class="form-control" placeholder="Masukan SE Fraktal Spesimen"  
+            name="se_fraktal_spesimen" id="se_fraktal_spesimen"/>
+          </div>
+          <div class="col">
+            <p>Keparahan Jari-Jari Lobus :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Jari-Jari Lobus" 
+            name="keparahan_jari2_lobus"  id="keparahan_jari2_lobus"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Keparahan Tekstur Permukaan :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Tekstur Permukaan"  
+            name="keparahan_tekstur_permukaan" id="keparahan_tekstur_permukaan" />
+          </div>
+          <div class="col">
+            <p>Keparahan Tumor Inti :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Tumor Inti" 
+            name="keparahan_tumor_inti" id="keparahan_tumor_inti"/>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col">
+            <p>Keparahan Luas Lobus :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Luas Lobus"  
+            name="keparahan_luas_lobus" id="keparahan_luas_lobus"/>
+          </div>
+          <div class="col">
+            <p>Keparahan Luas Permukaan Tumor :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Luas Permukaan Tumor" 
+            name="keparahan_luas_permukaan_tumor" id="keparahan_luas_permukaan_tumor"/>
+          </div> 
+        <div class="row">
+          <div class="col">
+            <p>Keparahan Cekungan Kontur :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Cekungan Kontur"  
+            name="keparahan_cekungan_kontur" id="keparahan_cekungan_kontur"/>
+          </div>
+          <div class="col">
+            <p>Keparahan Jumlah Cekungan Kontur :</p>
+            <input type="number" class="form-control" placeholder="Masukan Keparahan Jumlah Cekungan Kontur" 
+            name="keparahan_jumlah_cekungan_kontur" id="keparahan_jumlah_cekungan_kontur" />
+          </div>
+        </div>
+        <center>
+        <br>
+        <br>         
+     <hr>
+    <div class="form-group">
+     <button type="submit" class="btn btn-primary">Simpan</button>
+     <a href="http://127.0.0.1:8000/viewdata/" class="btn btn-danger btn-sm" role="button" >Kembali</a>
     </div>
+ </div>
+ <br>
+ <br>
+ <br>
+ </center>
+ </form>
+ </div>				
+</div>
+</div>
 </div>
 
 {% endblock content %}

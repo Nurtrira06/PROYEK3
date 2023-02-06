@@ -17,6 +17,9 @@
     <link href={% static "img/logo.ico" %} rel="shortcut icon"> {% endcomment %}
     <!-- Static CSS -->
     <link href={% static "css/style.css" %} rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <style media="screen">
       body {
         margin: 0;
@@ -89,6 +92,10 @@
              
               <li class="nav-item">
                 <a class="nav-link{% if navbar == 'visualization' %} active {% endif %}" href="{% url 'visualization'%}" style="color:#ffffff">Visualization</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link{% if navbar == 'viewdata' %} active {% endif %}" href="http://127.0.0.1:8000/viewdata/" style="color:#ffffff">Data Cancer</a>
               </li>
             
               <li class="nav-item">
